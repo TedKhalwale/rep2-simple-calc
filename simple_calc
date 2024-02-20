@@ -1,0 +1,42 @@
+# Create a simple calculator which can perform: Addition, Subtraction, Multiplication and
+# Division while taking user inputs / prompting the user for inputs
+
+
+#       CALCULATOR
+
+# Prompt the user to enter two numbers
+# The calc only allows numbers as the first input
+while True:
+    try:
+         num1 = int(input('Enter the first value: '))
+         num2 = int(input('Enter the second value: '))
+         break
+    except ValueError:
+        print("Enter a number")
+                  
+        
+# A set of options for the user to choose from
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+# Enter an infinite loop to ensue only one of the options is picked 
+while True:
+# Prompt the user to enter the option he/she wants to be performed
+    choice = input("Which option do you want to perform? ")
+    if choice in ['1', '2','3','4']:
+        break
+    else:
+        print("invalid  input, please enter valid no")
+if choice == '1':
+    print(num1 + num2)
+elif choice == '2':
+    print(num1 - num2)
+elif choice == '3':
+    print(num1 * num2)
+elif choice == '4':
+    print(num1 / num2)
+
+# Thank the user for using the calc
+print("Thanks for using our calculator")
